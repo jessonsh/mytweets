@@ -24,4 +24,5 @@ urlpatterns = [
     url('one line'),
     url(),
     'ad some dfs'
+    'fdslgds;f'
 ]
