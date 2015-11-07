@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url('one line'),
     url(),
+    'ad some dfs'
 ]
