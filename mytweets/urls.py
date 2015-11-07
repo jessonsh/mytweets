@@ -21,6 +21,6 @@ from tweets import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
+    url('one line'),
     url(),
-    url('add one line at master')
 ]
