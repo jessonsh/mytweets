@@ -16,7 +16,7 @@ class Profile(View):
     def get(self, request, username):
         param = {}
         user = User.objects.get(username=username)
-        tweets = Tweet.objects.get(user = user)
+        tweets = Tweet.objects.filter(user = user)
         param['user'] = user
         param['tweets'] = tweets
         return render(request, 'profile.html', param)
