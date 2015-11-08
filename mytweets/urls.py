@@ -22,5 +22,5 @@ from tweets.views import Profile
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^user/(\w+)/$',Profile.as_view(), name='user_page'),
+    url(r'^user/(\w+)/$',Profile.as_view()),
 ]
