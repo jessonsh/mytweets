@@ -16,11 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from tweets import views
-from tweets.views import Profile
+from tweets.views import index, Profile, ProfilePost, HashTagCloud
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^user/(\w+)/$',Profile.as_view()),
+    url(r'^user/(\w+)/post/', ProfilePost.as_view()),
+    url(r'hashtag/(\w+)/', HashTagCloud.as_view()),
 ]

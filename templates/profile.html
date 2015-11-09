@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class='row clearfix'>
+    {{user}}
 <div class="col-md-12 column">
     <form action="post/" method="post">
         {%csrf_token %}
