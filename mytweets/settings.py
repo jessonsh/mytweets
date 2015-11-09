@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'user_profile',
+    'tweets',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,10 +69,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
-        'LOADERS' = (
-            'django.template.loaders.filesystem.Loader',
-            'django.template.loaders.app_directories.Loader',
-            )
+        #'LOADERS' = (
+            #'django.template.loaders.filesystem.Loader',
+            #'django.template.loaders.app_directories.Loader',
+            #)
     },
 ]
 
@@ -108,5 +110,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-            os.path.join(os.path.dirname(__file__), 'static'),
+            os.path.join(BASE_DIR, 'static'),
         )
